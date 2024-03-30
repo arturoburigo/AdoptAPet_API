@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  api-solid-pg:
+    image: bitnami/postgresql
+    ports:
+      - "54320:5432" # Mapeia a porta 5432 do container para a porta 54320 do host
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=adoptpet
